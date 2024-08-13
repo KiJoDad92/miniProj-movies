@@ -12,12 +12,12 @@ app.use(express.json());
 
 pool.query(
     `DELETE FROM movies Where id=$1`,
-    0,
+    
     (err: Error, result: QueryResult) => {
         if (err) {
           console.log(err);
         } else {
-          console.log(`${result.rowCount} row(s) deleted!`);
+          console.log(`${result}movie deleted!`);
         }
       });
 
